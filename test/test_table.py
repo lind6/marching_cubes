@@ -38,6 +38,29 @@ def test_adjacent_map( aItems ):
 				print( "Adjacent Map test failed: vertex " + str(i) )
 
 	print( "Adjacent map test succeeded" )
+	
+def test_adjacent_func( f ):
+
+    # check all success cases
+    v1 = [0,0,0,1,1,1,2,2,2,3,3,3,4,4,4,5,5,5,6,6,6,7,7,7]
+    v2 = [1,3,4,0,2,5,1,3,6,0,2,7,0,5,7,1,4,6,2,5,7,3,4,6]
+    
+    for i in range(0, len(v1),1 ):
+        if f( v1[i], v2[i] ) == False:
+            print( "failed: isAdjacent( " + str(v1[i]) + ", " + str(v2[i]) + " )" )
+            return
+    
+    # check all fail cases
+    v1 = [0,0,0,0,1,1,1,1,2,2,2,2,3,3,3,3,4,4,4,4,5,5,5,5,6,6,6,6,7,7,7,7,0,1,2,3,4,5,6,7]
+    v2 = [2,5,6,7,3,4,6,7,0,4,5,7,1,4,5,6,1,2,3,6,0,2,3,7,0,1,3,4,0,1,2,5,0,1,2,3,4,5,6,7]
+    
+    for i in range(0, len(v1),1 ):
+        if f( v1[i], v2[i] ) == True:
+            print( "failed: isAdjacent( " + str(v1[i]) + ", " + str(v2[i]) + " )" )
+            return
+            
+    print( "isAdjacent() test succeeded" )
+
 
 def test_diagonal_map( aItems ):
 
@@ -55,6 +78,29 @@ def test_diagonal_map( aItems ):
 			return(1)
 
 	print( "Diagonal map test succeeded" )
+	
+def test_diagonal_func( f ):
+
+    # check all success cases
+    
+    v1 = [0,0,0,1,1,1,2,2,2,3,3,3,4,4,4,5,5,5,6,6,6,7,7,7]
+    v2 = [2,5,7,3,6,4,0,5,7,1,4,6,6,3,1,7,0,2,4,1,3,5,2,0]
+    
+    for i in range(0, len(v1),1 ):
+        if f( v1[i], v2[i] ) == False:
+            print( "  Failed: isDiagonal( " + str(v1[i]) + ", " + str(v2[i]) + " )" )
+            return
+    
+    # check all fail cases
+    v1 = [0,0,0,0,1,1,1,1,2,2,2,2,3,3,3,3,4,4,4,4,5,5,5,5,6,6,6,6,7,7,7,7,0,1,2,3,4,5,6,7]
+    v2 = [1,3,4,6,0,2,5,7,1,3,4,6,0,2,5,7,0,2,5,7,1,3,4,6,0,2,5,7,1,3,4,6,0,1,2,3,4,5,6,7]
+    
+    for i in range(0, len(v1),1 ):
+        if f( v1[i], v2[i] ) == True:
+            print( "  Failed: isDiagonal( " + str(v1[i]) + ", " + str(v2[i]) + " )" )
+            return
+            
+    print( "isDiagonal() test succeeded" )
 
 def test_opposite_map( aItems ):
 
@@ -69,6 +115,72 @@ def test_opposite_map( aItems ):
 
 	print( "Opposite map test succeeded" )
 
+
+def test_opposite_func( f ):
+
+    v1 = [0,1,2,3,4,5,6,7]
+    v2 = [6,7,4,5,2,3,0,1]
+    
+    for i in range(0, len(v1),1 ):
+        for j in range( 0, len(v1), 1):
+            r = f( v1[i], j )
+            if ( r == True and j != v2[i] ) or (r == False and j == v2[i]):
+                print( "  Failed: isOpposite( " + str(v1[i]) + ", " + str(j) + " )" )
+                return
+            
+    print( "isOpposite() test succeeded" )
+    
+def test_sameface_func( f ):
+
+    v = [ [0,1,2,3], [0,1,4,5], [0,3,4,7], [1,2,5,6], [2,3,6,7], [4,5,6,7] ]
+    
+    for i in range(0,5):
+        for j in range(i+1,8):
+            for k in range(j+1,8):
+                for m in range(k+1,8):
+                    
+                    expected = False
+                    items = [i,j,k,m]
+                    if items == v[0] or items == v[1] or items == v[2] or items == v[3] or items == v[4] or items == v[5]:
+                        expected = True
+
+                    r = f( items )
+                    
+                    if r != expected:
+                        print( "  Failed: isPolesOnSameFace( " + str( items ) + " )" )
+                        return       
+            
+    print( "isPolesOnSameFace() test succeeded" )
+    
+def test_polesdiagonal_func( f ):
+
+    v = [ 
+        [0,1,6,7],
+        [0,2,4,6], 
+        [0,3,5,6],
+        [1,2,4,7],
+        [1,3,5,7],
+        [2,3,4,5]
+    ]
+    
+    for i in range(0,5):
+        for j in range(i+1,8):
+            for k in range(j+1,8):
+                for m in range(k+1,8):
+                    
+                    expected = False
+                    items = [i,j,k,m]
+                    if items == v[0] or items == v[1] or items == v[2] or items == v[3] or items == v[4] or items == v[5]:
+                        expected = True
+
+                    r = f( items )
+                    
+                    if r != expected:
+                        print( "  Failed: isPolesOnDiagonal( " + str( items ) + " )" )
+                        return       
+            
+    print( "isPolesOnDiagonal() test succeeded" )
+    
 
 def test_poletriad_map( aItems ):
 
@@ -107,6 +219,39 @@ def test_poletriad_map( aItems ):
 				return(1)
 
 	print( "Pole Triad map test succeeded" )
+	
+def test_poletriad_func( f ):
+
+    v = [
+        [0,1,2,5],     
+        [0,1,3,4],
+        [0,2,3,7], 
+        [0,4,5,7],        
+        [1,2,3,6], 
+        [1,4,5,6],
+        [2,5,6,7], 
+        [3,4,6,7] 
+    ]
+    
+    for i in range(0,5):
+        for j in range(i+1,8):
+            for k in range(j+1,8):
+                for m in range(k+1,8):
+                    
+                    expected = False
+                    items = [i,j,k,m]
+                    if items == v[0] or items == v[1] or items == v[2] or items == v[3] or items == v[4] or items == v[5] or items == v[6] or items == v[7]:
+                        expected = True
+
+                    r = f( items )
+                    
+                    if r != expected:
+                        print( "  Failed: isPoleTriad( " + str( items ) + " )" )
+                        return       
+            
+    print( "isPoleTriad() test succeeded" )
+    
+
 
 def test_adjacent_edges_map( aItems ):
 
@@ -158,3 +303,8 @@ def test_seven_pole( func ):
 			print( "invalid indices: ", i, indices )
 
 	print( "7-pole tests succeeded" )
+	
+	
+def test_two_pole( func ):
+    print( "I have no idea if it succeeded" )
+    
