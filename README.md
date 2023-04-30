@@ -21,11 +21,13 @@ The notebook consists of 4 parts.  Part 1 defines small lookup tables for helper
 
 ## Notes
 
+The notebooks were developed and tested using Python 3.8.1 and PyVista 0.31.3 on Ubuntu Linux.  Other versions of may work, but your mileage may vary.
+
 The algorithms implemented are single-threaded versions.  Parallel versions are left as an exercise for the student.
 
 I provided detailed explanations and code samples to clarify details at each step, but there may be sections that could use additional work.  Not all sections have test cases, but the provided test cases should be enough to complete the labs.  I am still developing this project and welcome feedback to improve it.  However, I ask users get latest version and give a serious attempt to complete it before offering feedback.
 
-One challenge faced while developing this project was how to break down the tasks into manageable discrete steps.  I implemented the algorithm as a class because its simpler and most often how its done in professional environments, but it means the class must be developed in one step making for a lot of work for the student.  Another option was to convert the implementation to a function based approach using parallel arrays for managing data.  While doable, it would increase the workload and make for a hair pulling debugging experience.  I am open to suggestions for improvement.
+One challenge faced while developing this project was how to break down the tasks into manageable discrete steps.  I implemented the algorithm as a class because its simpler and most often how its done in professional environments, but it means the class must be developed in one step making for a lot of work for the student.  Another option was to convert the implementation to a function based approach using parallel arrays for managing data.  While doable, it would increase the workload and make for a hair pulling debugging experience.
 
 - Feedback welcomed (suggestions for improvement, bug reports, ...)
 - Solutions available to verified instructional staff by request.
@@ -35,7 +37,8 @@ One challenge faced while developing this project was how to break down the task
    - For educational purposes only.
    - Students may download and use the content.
    - Instructors may use content for instruction.
+   - Content must be obtained from original repository.  Cannot be redistributed without author permission.
    - Components of content may __not__ be used for other purposes.
    - Content may __not__ be modified (other than what is specified by the content).<br>
-         When in doubt, contact the author.
-
+   <br>
+   When in doubt, contact the author.
