@@ -2,7 +2,7 @@
 
 author: Matthew Lind, University of Illinois at Urbana-Champaign
 
-This repository contains labs to implement the marching cubes and marching tetrahedra algorithms to visualize superquadrics primitives.  The labs are not overly difficult, but can be time consuming.  The content was originally part of a study of the algorithms submitted as as the course project for UIUC's CS519 Scientific Visualization.  The study was later converted to labs for general use.
+This repository contains labs to implement the marching cubes and marching tetrahedra algorithms to visualize superquadrics primitives.  The labs are not overly difficult, but can be time consuming.  The content was originally part of a study of the algorithms submitted as as the course project for UIUC's CS519 Scientific Visualization.  The study was later converted to these labs for educational use.
 
 There are two labs provided:
 
@@ -10,7 +10,7 @@ There are two labs provided:
 
 This is the main notebook and consists of 11 parts.  The first 3 parts cover the fundamentals of creating polygon meshes using PyVista, generating scalar fields, and implementing the superquadrics equation.  Parts 4 through 8 implement the Marching Cubes and Marching Tetrahedra algorithms as classes with lookup tables, including test cases for debugging.  Parts 9 through 11 deal with final report and analysis.
 
-The first 3 parts should be quick and easy.  Part 4 is probably the most time consuming as the entire Marching Tetrahedra 6 class must be implemented, but if you perservere and complete this part, the rest of the lab is downhill.  Part 5 is an extension of the work in part 4 implementing Marching Tetrahedra 5.  Part 6 implements Marching Cubes, which is simpler than Marching tetrahedra, but the user must develop the lookup table him/her self.  The lookup table can be created manually, but doing so can be a tedious hair-pulling experience.  To alleviate the angst, I created a 2nd notebook specifically for this task.  It is optional, but strongly encouraged...
+The first 3 parts should be quick and easy.  Part 4 is probably the most time consuming as the entire Marching Tetrahedra 6 class must be implemented, but if you perservere and complete this part, the rest of the lab is downhill.  Part 5 is an extension of the work in part 4 implementing Marching Tetrahedra 5.  Part 6 implements Marching Cubes, which is simpler than Marching tetrahedra, but the user must develop the lookup table him/her self.  The lookup table can be created manually, but doing so can be a tedious hair-pulling experience.  I created a 2nd notebook specifically for this task which is optional, but strongly encouraged.
 
 ### Marching_cubes_table__lab.ipynb:
 
@@ -25,7 +25,7 @@ The algorithms implemented are single-threaded versions.  Parallel versions are 
 
 I provided detailed explanations and code samples to clarify details at each step, but there may be sections that could use additional work.  Not all sections have test cases, but the provided test cases should be enough to complete the labs.  I am still developing this project and welcome feedback to improve it.  However, I ask users get latest version and give a serious attempt to complete it before offering feedback.
 
-One challenge faced while developing this project was how to break down the tasks into manageable discrete steps.  I struggled with strategies to mitigate this problem.  I implemented the algorithm as a class because its simpler and most likely how its done in professional environments, but it means the class needs to be developed in one step making for a lot of work for the student.  Another option was to convert the implementation to a function based approach using parallel arrays for managing data.  While doable, it would increase the workload and make for a hair pulling debugging experience.  I am open to suggestions for improvement.
+One challenge faced while developing this project was how to break down the tasks into manageable discrete steps.  I struggled with strategies to mitigate this problem.  I implemented the algorithm as a class because its simpler and most often how its done in professional environments, but it means the class needs to be developed in one step making for a lot of work for the student.  Another option was to convert the implementation to a function based approach using parallel arrays for managing data.  While doable, it would increase the workload and make for a hair pulling debugging experience.  I am open to suggestions for improvement.
 
 
 # License
