@@ -1,7 +1,7 @@
 # README: Marching Cubes and Marching Tetrahedra labs
 
 _Author_: Matthew Lind, University of Illinois at Urbana-Champaign (lind6@illinois.edu)
-_last update_: April 2023
+<br>_last update_: April 2023
 
 This repository contains labs to implement the marching cubes and marching tetrahedra algorithms to visualize superquadrics primitives.  The labs are not overly difficult, but can be time consuming.  The content was originally part of a study of the algorithms submitted as as the course project for UIUC's CS519 Scientific Visualization.  The study was later converted to these labs for educational use.
 
