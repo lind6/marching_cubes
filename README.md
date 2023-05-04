@@ -4,11 +4,11 @@ _Author_: Matthew Lind, University of Illinois at Urbana-Champaign (lind6@illino
 <br>_last update_: May 3, 2023
 
 History:
-May 3, 2023: Added evalTetra(), intersection testing description, unit tests, and revised significant amounts of documentation to better explain the implementation of the Marching Tetrahedra 6 algorithm and make the task of implementing the Cell and IsoMesh classes less intimidating.
-April 30, 2023: Added unit tests for Marching_Cubes_Table lab.
-April 29, 2023: Updated illustrations for both labs.
-April 27, 2023: migrate to github
-December 20, 2020: initial version
+- May 3, 2023: Added evalTetra(), intersection testing description, unit tests, and revised significant amounts of documentation to better explain the implementation of the Marching Tetrahedra 6 algorithm and make the task of implementing the Cell and IsoMesh classes less intimidating.
+- April 30, 2023: Added unit tests for Marching_Cubes_Table lab.
+- April 29, 2023: Updated illustrations for both labs.
+- April 27, 2023: migrate to github
+- December 20, 2020: initial version
 ---
 
 This repository contains labs to implement the marching cubes and marching tetrahedra algorithms to visualize superquadrics primitives.  The labs are not overly difficult, but can be time consuming.  The content was originally part of a study of the algorithms submitted as as the course project for UIUC's CS519 Scientific Visualization, then later converted to these labs for educational use.
