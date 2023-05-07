@@ -1,4 +1,4 @@
-# README: Marching Cubes and Marching Tetrahedra labs
+# README: Visualizing SuperQuadric primitives using Marching Cubes and Marching Tetrahedra labs
 
 _Author_: Matthew Lind, University of Illinois at Urbana-Champaign (lind6@illinois.edu)
 <br>_last update_: May 6, 2023
