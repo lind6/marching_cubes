@@ -12,7 +12,9 @@ History:
 - December 20, 2020: initial version
 ---
 
-This repository contains labs to implement the marching cubes and marching tetrahedra algorithms to visualize superquadrics primitives.  The labs are not overly difficult, but can be time consuming.  The content was originally part of a study of the algorithms submitted as as the course project for UIUC's CS519 Scientific Visualization, then later converted to these labs for educational use.
+This repository contains labs to implement the marching cubes and marching tetrahedra algorithms to visualize superquadrics primitives.  SuperQuadrics are volumetric density-based primitives described by a variation of the sphere equation.  In computer graphics, they can be implemented as metaballs or blobby particles, with the main character of the 1997 movie "Flubber" as a prime example.  Marching Cubes is an algorithm to visualize volumetric data (isosurfaces) by dicing the coordinate space into virtual cubes and performing intersection tests with the isosurface.  Marching Tetrahedra is a variation of the Marching Cubes algorithm which further subdivides the virtual cubes into tetrahedra to simplify the math of intersection testing, but at the expense of additional system resources.
+
+This content was originally part of a study of the algorithms submitted as as the course project for UIUC's CS519 Scientific Visualization, then later converted to these labs for educational use.  The labs are not overly difficult, but may be time consuming to the uninitiated.  Students should have prior experience with Python and at least one computer graphics course, or equivalent experience.  Mathematically, logic and basic algebra will suffice.  Computer science skills involve use of basic data structures such as lists, hash tables, or trees, class design/implementation, and visual debugging.
 
 There are two labs provided:
 
