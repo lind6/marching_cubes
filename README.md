@@ -1,7 +1,7 @@
 # README: Marching Cubes and Marching Tetrahedra labs
 
 _Author_: Matthew Lind, University of Illinois at Urbana-Champaign (lind6@illinois.edu)
-<br>_last update_: May 3, 2023
+<br>_last update_: May 6, 2023
 
 History:
 - May 6, 2023: Cleaned up all the labs of inconsistencies, moved unit tests from notebook to script, reduced clutter, consolidated plot functions, homogenized code to better reflect documentation, added clarity to documentation, fixed bugs in StopWatch(), added dumpStats() method to isoMesh class for use in debugging.
